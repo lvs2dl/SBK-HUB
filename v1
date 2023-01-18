@@ -392,6 +392,82 @@ tpcofreplr.Size = UDim2.new(0, 178,0, 33)
 tpcofreplr.TextColor3 = Color3.fromRGB(0,0,0)
 tpcofreplr.Text = "Teleportar pro cofre do player"
 tpcofreplr.TextScaled = true
+local Framecasmod2 = Instance.new("ScrollingFrame", Framedrag)
+Framecasmod2.Name = "Framecasmod2"
+Framecasmod2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+Framecasmod2.BorderColor3 = Color3.fromRGB(0,0,0)
+Framecasmod2.Position = UDim2.new(0.212, 0,0.047, 0)
+Framecasmod2.Size = UDim2.new(0, 438,0, 289)
+Framecasmod2.Visible = false
+Framecasmod2.ScrollBarThickness = 8
+Framecasmod2.ScrollBarImageColor3 = Color3.fromRGB(0,0,0)
+local modo1 = Instance.new("TextButton", Framecas)
+modo1.BackgroundColor3 = Color3.fromRGB(117,117,117)
+modo1.BorderColor3 = Color3.fromRGB(0,0,0)
+modo1.Position = UDim2.new(0, 0,-0, 0)
+modo1.Size = UDim2.new(0, 29,0, 17)
+modo1.TextColor3 = Color3.fromRGB(0,0,0)
+modo1.Text = "1"
+modo1.TextScaled = true
+local modo2 = Instance.new("TextButton", Framecasmod2)
+modo2.BackgroundColor3 = Color3.fromRGB(117,117,117)
+modo2.BorderColor3 = Color3.fromRGB(0,0,0)
+modo2.Position = UDim2.new(0, 0,-0, 0)
+modo2.Size = UDim2.new(0, 29,0, 17)
+modo2.TextColor3 = Color3.fromRGB(0,0,0)
+modo2.Text = "2"
+modo2.TextScaled = true
+local rembandacasa2 = Instance.new("TextButton", Framecasmod2)
+rembandacasa2.BackgroundColor3 = Color3.fromRGB(117,117,117)
+rembandacasa2.BorderColor3 = Color3.fromRGB(0,0,0)
+rembandacasa2.Position = UDim2.new(0.514, 0,0.207, 0)
+rembandacasa2.Size = UDim2.new(0, 178,0, 33)
+rembandacasa2.TextColor3 = Color3.fromRGB(0,0,0)
+rembandacasa2.Text = "Remover ban da casa do plr"
+rembandacasa2.TextScaled = true
+local nomeplrtxt2 = Instance.new("TextBox", Framecasmod2)
+nomeplrtxt2.BackgroundColor3 = Color3.fromRGB(117,117,117)
+nomeplrtxt2.BorderColor3 = Color3.fromRGB(0,0,0)
+nomeplrtxt2.Position = UDim2.new(0.514, 0,0.026, 0)
+nomeplrtxt2.Size = UDim2.new(0, 178,0, 48)
+nomeplrtxt2.TextColor3 = Color3.fromRGB(0,0,0)
+nomeplrtxt2.TextScaled = true
+nomeplrtxt2.Text = "Nome do jogador"
+local remtodosbans2 = Instance.new("TextButton", Framecasmod2)
+remtodosbans2.BackgroundColor3 = Color3.fromRGB(117,117,117)
+remtodosbans2.BorderColor3 = Color3.fromRGB(0,0,0)
+remtodosbans2.Position = UDim2.new(0.08, 0,0.027, 0)
+remtodosbans2.Size = UDim2.new(0, 178,0, 33)
+remtodosbans2.TextColor3 = Color3.fromRGB(0,0,0)
+remtodosbans2.Text = "Remover todos os bans (EM BREVE)"
+remtodosbans2.TextScaled = true
+local roubartdscofres2 = Instance.new("TextButton", Framecasmod2)
+roubartdscofres2.BackgroundColor3 = Color3.fromRGB(117,117,117)
+roubartdscofres2.BorderColor3 = Color3.fromRGB(0,0,0)
+roubartdscofres2.Position = UDim2.new(0.08, 0,0.103, 0)
+roubartdscofres2.Size = UDim2.new(0, 178,0, 33)
+roubartdscofres2.TextColor3 = Color3.fromRGB(0,0,0)
+roubartdscofres2.Text = "Roubar todos os cofres (EM BREVE)"
+roubartdscofres2.TextScaled = true
+local tpcasaplr2 = Instance.new("TextButton", Framecasmod2)
+tpcasaplr2.BackgroundColor3 = Color3.fromRGB(117,117,117)
+tpcasaplr2.BorderColor3 = Color3.fromRGB(0,0,0)
+tpcasaplr2.Position = UDim2.new(0.514, 0,0.1, 0)
+tpcasaplr2.Size = UDim2.new(0, 178,0, 33)
+tpcasaplr2.TextColor3 = Color3.fromRGB(0,0,0)
+tpcasaplr2.Text = "Tp para casa do player"
+tpcasaplr2.TextScaled = true
+local tpcofreplr2 = Instance.new("TextButton", Framecasmod2)
+tpcofreplr2.BackgroundColor3 = Color3.fromRGB(117,117,117)
+tpcofreplr2.BorderColor3 = Color3.fromRGB(0,0,0)
+tpcofreplr2.Position = UDim2.new(0.514, 0,0.154, 0)
+tpcofreplr2.Size = UDim2.new(0, 178,0, 33)
+tpcofreplr2.TextColor3 = Color3.fromRGB(0,0,0)
+tpcofreplr2.Text = "Teleportar pro cofre do player"
+tpcofreplr2.TextScaled = true
+local casasvalue = Instance.new("NumberValue", Framedrag)
+casasvalue.Name = "casasvalue"
+casasvalue.Value = 1
 
 
 ------ draggable gui ------
@@ -445,6 +521,7 @@ principal.MouseButton1Click:Connect(function()
 	casas.BorderColor3 = Color3.fromRGB(0,0,0)
 	Frameout.Visible = false
 	outros.BorderColor3 = Color3.fromRGB(0,0,0)
+	Framecasmod2.Visible = false
 end)
 teleporte.MouseButton1Click:Connect(function()
 	Framepri.Visible = false
@@ -455,16 +532,24 @@ teleporte.MouseButton1Click:Connect(function()
 	casas.BorderColor3 = Color3.fromRGB(0,0,0)
 	Frameout.Visible = false
 	outros.BorderColor3 = Color3.fromRGB(0,0,0)
+	Framecasmod2.Visible = false
 end)
 casas.MouseButton1Click:Connect(function()
 	Framepri.Visible = false
 	principal.BorderColor3 = Color3.fromRGB(0,0,0)
 	Frametel.Visible = false
 	teleporte.BorderColor3 = Color3.fromRGB(0,0,0)
-	Framecas.Visible = true
+--	Framecas.Visible = true
 	casas.BorderColor3 = Color3.fromRGB(0,255,0)
 	Frameout.Visible = false
 	outros.BorderColor3 = Color3.fromRGB(0,0,0)
+	if casasvalue.Value == 1 then
+		Framecas.Visible = true
+		Framecasmod2.Visible = false
+	else
+		Framecasmod2.Visible = true
+		Framecas.Visible = false
+	end
 end)
 outros.MouseButton1Click:Connect(function()
 	Framepri.Visible = false
@@ -475,6 +560,7 @@ outros.MouseButton1Click:Connect(function()
 	casas.BorderColor3 = Color3.fromRGB(0,0,0)
 	Frameout.Visible = true
 	outros.BorderColor3 = Color3.fromRGB(0,255,0)
+	Framecasmod2.Visible = false
 end)
 
 
@@ -530,6 +616,7 @@ end)
 cofrebanco.MouseButton1Click:Connect(function()
 	game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = cofredobancotp.CFrame
 end)
+--[[
 rembandeumacasa.MouseButton1Click:Connect(function()
 	local plrnametxt = rembantxt.Text
 	local plrname = plrnametxt.."House"
@@ -560,4 +647,227 @@ tpcasaplr.MouseButton1Click:Connect(function()
 	local casaplrtp = casa.RPName
 	local meujogador = game:GetService("Players").LocalPlayer.Character
 	meujogador.HumanoidRootPart.CFrame = casaplrtp.CFrame
+end)
+--]]
+tpcofreplr.MouseButton1Click:Connect(function()
+--	if #script.Parent.Parent.Display:GetChildren() > 1 then
+--		for i, v in pairs(script.Parent.Parent.Display:GetChildren()) do
+--			if v:IsA("TextButton") then
+--				v:Destroy()
+--			end
+--		end
+--	end
+	local Text = tpcofretxt.Text
+	for i,  v in pairs(game.Players:GetPlayers()) do
+		if string.find(v.Name, Text) then
+			local plrnametxt = v.Name
+			local plrname = plrnametxt.."House"
+			local lots = workspace:WaitForChild("001_Lots")
+			local casa = lots:WaitForChild(plrname)
+			local numero = casa.Number.Number.Value
+			local cofre = casa.HousePickedByPlayer.HouseModel:WaitForChild("001_Safe")
+			local tpcofre = cofre.Keypad.Part
+			local meujogador = game:GetService("Players").LocalPlayer.Character
+			meujogador.HumanoidRootPart.CFrame = tpcofre.CFrame
+		end
+	end
+end)
+tpcasaplr.MouseButton1Click:Connect(function()
+--	if #script.Parent.Parent.Display:GetChildren() > 1 then
+--		for i, v in pairs(script.Parent.Parent.Display:GetChildren()) do
+--			if v:IsA("TextButton") then
+--				v:Destroy()
+--			end
+--		end
+--	end
+	local Text = tpcasaplrtxt.Text
+	for i,  v in pairs(game.Players:GetPlayers()) do
+		if string.find(v.Name, Text) then
+			local casatxt = v.Name
+			local plrname = casatxt.."House"
+			local lots = workspace:WaitForChild("001_Lots")
+			local casa = lots:WaitForChild(plrname)
+			local numero = casa.Number.Number.Value
+			local casaplrtp = casa.RPName
+			local meujogador = game:GetService("Players").LocalPlayer.Character
+			meujogador.HumanoidRootPart.CFrame = casaplrtp.CFrame
+		end
+	end
+end)
+rembandeumacasa.MouseButton1Click:Connect(function()
+	local Text = rembantxt.Text
+	for i,  v in pairs(game.Players:GetPlayers()) do
+		if string.find(v.Name, Text) then
+			local plrnametxt = v.Name
+			local plrname = plrnametxt.."House"
+			local lots = workspace:WaitForChild("001_Lots")
+			local casa = lots:WaitForChild(plrname)
+			local numero = casa.Number.Number.Value
+			local banblock = "BannedBlock"..numero
+			local ban = casa.HousePickedByPlayer.HouseModel:WaitForChild(banblock)
+			ban:Destroy()
+		end
+	end
+end)
+modo1.MouseButton1Click:Connect(function()
+	Framecas.Visible = false
+	Framecasmod2.Visible = true
+	casasvalue.Value = 2
+end)
+modo2.MouseButton1Click:Connect(function()
+	Framecas.Visible = true
+	Framecasmod2.Visible = false
+	casasvalue.Value = 1
+end)
+rembandacasa2.MouseButton1Click:Connect(function()
+	local Text = nomeplrtxt2.Text
+	for i,  v in pairs(game.Players:GetPlayers()) do
+		if string.find(v.Name, Text) then
+			local plrnametxt = v.Name
+			local plrname = plrnametxt.."House"
+			local lots = workspace:WaitForChild("001_Lots")
+			local casa = lots:WaitForChild(plrname)
+			local numero = casa.Number.Number.Value
+			local banblock = "BannedBlock"..numero
+			local ban = casa.HousePickedByPlayer.HouseModel:WaitForChild(banblock)
+			ban:Destroy()
+		end
+	end
+end)
+tpcasaplr2.MouseButton1Click:Connect(function()
+	local Text = nomeplrtxt2.Text
+	for i,  v in pairs(game.Players:GetPlayers()) do
+		if string.find(v.Name, Text) then
+			local casatxt = v.Name
+			local plrname = casatxt.."House"
+			local lots = workspace:WaitForChild("001_Lots")
+			local casa = lots:WaitForChild(plrname)
+			local numero = casa.Number.Number.Value
+			local casaplrtp = casa.RPName
+			local meujogador = game:GetService("Players").LocalPlayer.Character
+			meujogador.HumanoidRootPart.CFrame = casaplrtp.CFrame
+		end
+	end
+end)
+tpcofreplr2.MouseButton1Click:Connect(function()
+	local Text = nomeplrtxt2.Text
+	for i,  v in pairs(game.Players:GetPlayers()) do
+		if string.find(v.Name, Text) then
+			local plrnametxt = v.Name
+			local plrname = plrnametxt.."House"
+			local lots = workspace:WaitForChild("001_Lots")
+			local casa = lots:WaitForChild(plrname)
+			local numero = casa.Number.Number.Value
+			local cofre = casa.HousePickedByPlayer.HouseModel:WaitForChild("001_Safe")
+			local tpcofre = cofre.Keypad.Part
+			local meujogador = game:GetService("Players").LocalPlayer.Character
+			meujogador.HumanoidRootPart.CFrame = tpcofre.CFrame
+		end
+	end
+end)
+tpcasaplr.MouseButton1Click:Connect(function()
+	--	if #script.Parent.Parent.Display:GetChildren() > 1 then
+	--		for i, v in pairs(script.Parent.Parent.Display:GetChildren()) do
+	--			if v:IsA("TextButton") then
+	--				v:Destroy()
+	--			end
+	--		end
+	--	end
+	local Text = tpcasaplrtxt.Text
+	for i,  v in pairs(game.Players:GetPlayers()) do
+		if string.find(v.DisplayName, Text) then
+			local casatxt = v.Name
+			local plrname = casatxt.."House"
+			local lots = workspace:WaitForChild("001_Lots")
+			local casa = lots:WaitForChild(plrname)
+			local numero = casa.Number.Number.Value
+			local casaplrtp = casa.RPName
+			local meujogador = game:GetService("Players").LocalPlayer.Character
+			meujogador.HumanoidRootPart.CFrame = casaplrtp.CFrame
+		end
+	end
+end)
+tpcofreplr.MouseButton1Click:Connect(function()
+	--	if #script.Parent.Parent.Display:GetChildren() > 1 then
+	--		for i, v in pairs(script.Parent.Parent.Display:GetChildren()) do
+	--			if v:IsA("TextButton") then
+	--				v:Destroy()
+	--			end
+	--		end
+	--	end
+	local Text = tpcofretxt.Text
+	for i,  v in pairs(game.Players:GetPlayers()) do
+		if string.find(v.DisplayName, Text) then
+			local plrnametxt = v.Name
+			local plrname = plrnametxt.."House"
+			local lots = workspace:WaitForChild("001_Lots")
+			local casa = lots:WaitForChild(plrname)
+			local numero = casa.Number.Number.Value
+			local cofre = casa.HousePickedByPlayer.HouseModel:WaitForChild("001_Safe")
+			local tpcofre = cofre.Keypad.Part
+			local meujogador = game:GetService("Players").LocalPlayer.Character
+			meujogador.HumanoidRootPart.CFrame = tpcofre.CFrame
+		end
+	end
+end)
+rembandeumacasa.MouseButton1Click:Connect(function()
+	local Text = rembantxt.Text
+	for i,  v in pairs(game.Players:GetPlayers()) do
+		if string.find(v.DisplayName, Text) then
+			local plrnametxt = v.Name
+			local plrname = plrnametxt.."House"
+			local lots = workspace:WaitForChild("001_Lots")
+			local casa = lots:WaitForChild(plrname)
+			local numero = casa.Number.Number.Value
+			local banblock = "BannedBlock"..numero
+			local ban = casa.HousePickedByPlayer.HouseModel:WaitForChild(banblock)
+			ban:Destroy()
+		end
+	end
+end)
+rembandacasa2.MouseButton1Click:Connect(function()
+	local Text = nomeplrtxt2.Text
+	for i,  v in pairs(game.Players:GetPlayers()) do
+		if string.find(v.DisplayName, Text) then
+			local plrnametxt = v.Name
+			local plrname = plrnametxt.."House"
+			local lots = workspace:WaitForChild("001_Lots")
+			local casa = lots:WaitForChild(plrname)
+			local numero = casa.Number.Number.Value
+			local banblock = "BannedBlock"..numero
+			local ban = casa.HousePickedByPlayer.HouseModel:WaitForChild(banblock)
+			ban:Destroy()
+		end
+	end
+end)
+tpcasaplr2.MouseButton1Click:Connect(function()
+	local Text = nomeplrtxt2.Text
+	for i,  v in pairs(game.Players:GetPlayers()) do
+		if string.find(v.DisplayName, Text) then
+			local casatxt = v.Name
+			local plrname = casatxt.."House"
+			local lots = workspace:WaitForChild("001_Lots")
+			local casa = lots:WaitForChild(plrname)
+			local numero = casa.Number.Number.Value
+			local casaplrtp = casa.RPName
+			local meujogador = game:GetService("Players").LocalPlayer.Character
+			meujogador.HumanoidRootPart.CFrame = casaplrtp.CFrame
+		end
+	end
+end)
+tpcofreplr2.MouseButton1Click:Connect(function()
+	local Text = nomeplrtxt2.Text
+	for i,  v in pairs(game.Players:GetPlayers()) do
+		if string.find(v.DisplayName, Text) then
+			local plrnametxt = v.Name
+			local plrname = plrnametxt.."House"
+			local lots = workspace:WaitForChild("001_Lots")
+			local casa = lots:WaitForChild(plrname)
+			local numero = casa.Number.Number.Value
+			local cofre = casa.HousePickedByPlayer.HouseModel:WaitForChild("001_Safe")
+			local tpcofre = cofre.Keypad.Part
+			local meujogador = game:GetService("Players").LocalPlayer.Character
+			meujogador.HumanoidRootPart.CFrame = tpcofre.CFrame
+		end
+	end
 end)
