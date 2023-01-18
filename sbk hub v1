@@ -1,0 +1,563 @@
+------ iniciar gui ------
+
+
+local ScriptBK = Instance.new("ScreenGui", game.Players.LocalPlayer.PlayerGui)
+ScriptBK.Name = "ScriptBK"
+ScriptBK.ResetOnSpawn = false
+local Framedrag = Instance.new("Frame", ScriptBK)
+Framedrag.Name = "Framedrag"
+Framedrag.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+Framedrag.BorderColor3 = Color3.fromRGB(0,0,0)
+Framedrag.BorderSizePixel = 2
+Framedrag.Position = UDim2.new(0.214, 0,0.189, 0)
+Framedrag.Size = UDim2.new(0, 575,0, 319)
+local Frameop = Instance.new("Frame", Framedrag)
+Frameop.Name = "Frameop"
+Frameop.BackgroundColor3 = Color3.fromRGB(71,71,71)
+Frameop.BorderColor3 = Color3.fromRGB(0,0,0)
+Frameop.Position = UDim2.new(0.026, 0,0.047, 0)
+Frameop.Size = UDim2.new(0,97,0,289)
+local Framepri = Instance.new("ScrollingFrame", Framedrag)
+Framepri.Name = "Framepri"
+Framepri.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+Framepri.BorderColor3 = Color3.fromRGB(0,0,0)
+Framepri.Position = UDim2.new(0.212, 0,0.047, 0)
+Framepri.Size = UDim2.new(0, 438,0, 289)
+Framepri.Visible = true
+Framepri.ScrollBarThickness = 8
+Framepri.ScrollBarImageColor3 = Color3.fromRGB(0,0,0)
+local Frametel = Instance.new("ScrollingFrame", Framedrag)
+Frametel.Name = "Frameptel"
+Frametel.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+Frametel.BorderColor3 = Color3.fromRGB(0,0,0)
+Frametel.Position = UDim2.new(0.212, 0,0.047, 0)
+Frametel.Size = UDim2.new(0, 438,0, 289)
+Frametel.Visible = false
+Frametel.ScrollBarThickness = 8
+Frametel.ScrollBarImageColor3 = Color3.fromRGB(0,0,0)
+local Framecas = Instance.new("ScrollingFrame", Framedrag)
+Framecas.Name = "Framecas"
+Framecas.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+Framecas.BorderColor3 = Color3.fromRGB(0,0,0)
+Framecas.Position = UDim2.new(0.212, 0,0.047, 0)
+Framecas.Size = UDim2.new(0, 438,0, 289)
+Framecas.Visible = false
+Framecas.ScrollBarThickness = 8
+Framecas.ScrollBarImageColor3 = Color3.fromRGB(0,0,0)
+local Frameout = Instance.new("ScrollingFrame", Framedrag)
+Frameout.Name = "Frameout"
+Frameout.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+Frameout.BorderColor3 = Color3.fromRGB(0,0,0)
+Frameout.Position = UDim2.new(0.212, 0,0.047, 0)
+Frameout.Size = UDim2.new(0, 438,0, 289)
+Frameout.Visible = false
+Frameout.ScrollBarThickness = 8
+Frameout.ScrollBarImageColor3 = Color3.fromRGB(0,0,0)
+local casas = Instance.new("TextButton", Frameop)
+casas.Name = "casas"
+casas.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+casas.BorderColor3 = Color3.fromRGB(0,0,0)
+casas.Position = UDim2.new(0.072, 0,0.318, 0)
+casas.Size = UDim2.new(0, 83,0, 30)
+casas.Text = "Casas"
+casas.TextScaled = true
+casas.TextColor3 = Color3.fromRGB(0,0,0)
+local teleporte = Instance.new("TextButton", Frameop)
+teleporte.Name = "teleporte"
+teleporte.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+teleporte.BorderColor3 = Color3.fromRGB(0,0,0)
+teleporte.Position = UDim2.new(0.072, 0,0.173, 0)
+teleporte.Size = UDim2.new(0, 83,0, 30)
+teleporte.Text = "Teleporte"
+teleporte.TextScaled = true
+teleporte.TextColor3 = Color3.fromRGB(0,0,0)
+local principal = Instance.new("TextButton", Frameop)
+principal.Name = "principal"
+principal.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+principal.BorderColor3 = Color3.fromRGB(0,255,0)
+principal.Position = UDim2.new(0.072, 0,0.028, 0)
+principal.Size = UDim2.new(0, 83,0, 30)
+principal.Text = "Principal"
+principal.TextScaled = true
+principal.TextColor3 = Color3.fromRGB(0,0,0)
+local outros = Instance.new("TextButton", Frameop)
+outros.Name = "outros"
+outros.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+outros.BorderColor3 = Color3.fromRGB(0,0,0)
+outros.Position = UDim2.new(0.072, 0,0.464, 0)
+outros.Size = UDim2.new(0, 83,0, 30)
+outros.Text = "Outros"
+outros.TextScaled = true
+outros.TextColor3 = Color3.fromRGB(0,0,0)
+local fechar = Instance.new("TextButton", Framepri)
+fechar.Name = "fechar"
+fechar.BackgroundColor3 = Color3.fromRGB(117,117,117)
+fechar.BorderColor3 = Color3.fromRGB(0,0,0)
+fechar.Position = UDim2.new(0.08, 0,0.105, 0)
+fechar.Size = UDim2.new(0, 178,0, 33)
+fechar.Text = "Fechar o script"
+fechar.TextScaled = true
+fechar.TextColor3 = Color3.fromRGB(0,0,0)
+local bemvindo = Instance.new("TextLabel", Framepri)
+bemvindo.Name = "bemvindo"
+bemvindo.BackgroundColor3 = Color3.fromRGB(117,117,117)
+bemvindo.BorderColor3 = Color3.fromRGB(0,0,0)
+bemvindo.Position = UDim2.new(0.08, 0,0.026, 0)
+bemvindo.Size = UDim2.new(0, 178,0, 33)
+bemvindo.Text = "Bem vindo, "..game:GetService("Players").LocalPlayer.Name.."!"
+bemvindo.TextScaled = true
+bemvindo.TextColor3 = Color3.fromRGB(0,0,0)
+local maisop = Instance.new("TextLabel", Framepri)
+maisop.Name = "maisop"
+maisop.BackgroundColor3 = Color3.fromRGB(117,117,117)
+maisop.BorderColor3 = Color3.fromRGB(0,0,0)
+maisop.Position = UDim2.new(0.514, 0,0.106, 0)
+maisop.Size = UDim2.new(0, 178,0, 33)
+maisop.Text = "Mais opções aqui em breve."
+maisop.TextScaled = true
+maisop.TextColor3 = Color3.fromRGB(0,0,0)
+local hotkey = Instance.new("TextLabel", Framepri)
+hotkey.Name = "hotkey"
+hotkey.BackgroundColor3 = Color3.fromRGB(117,117,117)
+hotkey.BorderColor3 = Color3.fromRGB(0,0,0)
+hotkey.Position = UDim2.new(0.514, 0,0.026, 0)
+hotkey.Size = UDim2.new(0, 178,0, 33)
+hotkey.Text = "Mostrar / Esconder gui: CTRL Direito"
+hotkey.TextScaled = true
+hotkey.TextColor3 = Color3.fromRGB(0,0,0)
+local Framefe = Instance.new("Frame", Framedrag)
+Framefe.Name = "Framefe"
+Framefe.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
+Framefe.BorderColor3 = Color3.fromRGB(0,0,0)
+Framefe.Position = UDim2.new(0.163, 0,0.066, 0)
+Framefe.Size = UDim2.new(0, 402,0, 276)
+Framefe.Visible = false
+local sim = Instance.new("TextButton", Framefe)
+sim.Name = "sim"
+sim.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+sim.BorderColor3 = Color3.fromRGB(0,255,0)
+sim.Position = UDim2.new(0.127, 0,0.674, 0)
+sim.Size = UDim2.new(0, 127,0, 50)
+sim.Text = "Sim"
+sim.TextColor3 = Color3.fromRGB(0,0,0)
+local nao = Instance.new("TextButton", Framefe)
+sim.Name = "nao"
+sim.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+sim.BorderColor3 = Color3.fromRGB(255,0,0)
+sim.Position = UDim2.new(0.557, 0,0.674, 0)
+sim.Size = UDim2.new(0, 127,0, 50)
+sim.Text = "Não"
+sim.TextColor3 = Color3.fromRGB(0,0,0)
+local atencao = Instance.new("TextLabel", Framefe)
+atencao.Name = "atencao"
+atencao.BackgroundColor3 = Color3.fromRGB(53,53,53)
+atencao.BorderColor3 = Color3.fromRGB(0,0,0)
+atencao.Position = UDim2.new(0.251, 0,0.036, 0)
+atencao.Size = UDim2.new(0, 200,0, 58)
+atencao.Text = "!ATENÇÃO!"
+atencao.TextColor3 = Color3.fromRGB(255,0,0)
+atencao.TextScaled = true
+local aviso = Instance.new("TextLabel", Framefe)
+aviso.Name = "aviso"
+aviso.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+aviso.BorderColor3 = Color3.fromRGB(0,0,0)
+aviso.Position = UDim2.new(0.127, 0,0.312, 0)
+aviso.Size = UDim2.new(0, 300,0, 69)
+aviso.Text = "Você realmente quer fechar o sbkhub?"
+aviso.TextColor3 = Color3.fromRGB(0,0,0)
+aviso.TextScaled = true
+local sbkhub = Instance.new("TextLabel", Framedrag)
+sbkhub.Name = "sbkhub"
+sbkhub.BackgroundTransparency = 1
+sbkhub.Position = UDim2.new(0, 0,0, 0)
+sbkhub.Size = UDim2.new(0, 74,0, 15)
+sbkhub.Text = "SBKHUB - V1"
+sbkhub.TextScaled = true
+sbkhub.TextColor3 = Color3.fromRGB(0,0,0)
+local lobby = Instance.new("TextButton", Frametel)
+lobby.BackgroundColor3 = Color3.fromRGB(117, 117, 117)
+lobby.BorderColor3 = Color3.fromRGB(0,0,0)
+lobby.Position = UDim2.new(0.08, 0,0.027, 0)
+lobby.Size = UDim2.new(0, 178,0, 33)
+lobby.Text = "Lobby"
+lobby.TextScaled = true
+lobby.TextColor3 = Color3.fromRGB(0,0,0)
+local morro = Instance.new("TextButton", Frametel)
+morro.BackgroundColor3 = Color3.fromRGB(117, 117, 117)
+morro.BorderColor3 = Color3.fromRGB(0,0,0)
+morro.Position = UDim2.new(0.514, 0,0.027, 0)
+morro.Size = UDim2.new(0, 178,0, 33)
+morro.Text = "Morro das casas"
+morro.TextScaled = true
+morro.TextColor3 = Color3.fromRGB(0,0,0)
+local safezone = Instance.new("TextButton", Frametel)
+safezone.BackgroundColor3 = Color3.fromRGB(117, 117, 117)
+safezone.BorderColor3 = Color3.fromRGB(0,0,0)
+safezone.Position = UDim2.new(0.08, 0,0.103, 0)
+safezone.Size = UDim2.new(0, 178,0, 33)
+safezone.Text = "Safe zone"
+safezone.TextScaled = true
+safezone.TextColor3 = Color3.fromRGB(0,0,0)
+local iate = Instance.new("TextButton", Frametel)
+iate.BackgroundColor3 = Color3.fromRGB(117, 117, 117)
+iate.BorderColor3 = Color3.fromRGB(0,0,0)
+iate.Position = UDim2.new(0.514, 0,0.103, 0)
+iate.Size = UDim2.new(0, 178,0, 33)
+iate.Text = "Iate"
+iate.TextScaled = true
+iate.TextColor3 = Color3.fromRGB(0,0,0)
+local acamp = Instance.new("TextButton", Frametel)
+acamp.BackgroundColor3 = Color3.fromRGB(117, 117, 117)
+acamp.BorderColor3 = Color3.fromRGB(0,0,0)
+acamp.Position = UDim2.new(0.08, 0,0.174, 0)
+acamp.Size = UDim2.new(0, 178,0, 33)
+acamp.Text = "Acampamento"
+acamp.TextScaled = true
+acamp.TextColor3 = Color3.fromRGB(0,0,0)
+local topodomorro = Instance.new("TextButton", Frametel)
+topodomorro.BackgroundColor3 = Color3.fromRGB(117, 117, 117)
+topodomorro.BorderColor3 = Color3.fromRGB(0,0,0)
+topodomorro.Position = UDim2.new(0.514, 0,0.174, 0)
+topodomorro.Size = UDim2.new(0, 178,0, 33)
+topodomorro.Text = "Topo do morro"
+topodomorro.TextScaled = true
+topodomorro.TextColor3 = Color3.fromRGB(0,0,0)
+local casaaban = Instance.new("TextButton", Frametel)
+casaaban.BackgroundColor3 = Color3.fromRGB(117, 117, 117)
+casaaban.BorderColor3 = Color3.fromRGB(0,0,0)
+casaaban.Position = UDim2.new(0.08, 0,0.246, 0)
+casaaban.Size = UDim2.new(0, 178,0, 33)
+casaaban.Text = "Casa abandonada"
+casaaban.TextScaled = true
+casaaban.TextColor3 = Color3.fromRGB(0,0,0)
+local fazenda = Instance.new("TextButton", Frametel)
+fazenda.BackgroundColor3 = Color3.fromRGB(117, 117, 117)
+fazenda.BorderColor3 = Color3.fromRGB(0,0,0)
+fazenda.Position = UDim2.new(0.514, 0,0.246, 0)
+fazenda.Size = UDim2.new(0, 178,0, 33)
+fazenda.Text = "Fazenda"
+fazenda.TextScaled = true
+fazenda.TextColor3 = Color3.fromRGB(0,0,0)
+local shopping = Instance.new("TextButton", Frametel)
+shopping.BackgroundColor3 = Color3.fromRGB(117, 117, 117)
+shopping.BorderColor3 = Color3.fromRGB(0,0,0)
+shopping.Position = UDim2.new(0.08, 0,0.318, 0)
+shopping.Size = UDim2.new(0, 178,0, 33)
+shopping.Text = "Shopping"
+shopping.TextScaled = true
+shopping.TextColor3 = Color3.fromRGB(0,0,0)
+local cofrebanco = Instance.new("TextButton", Frametel)
+cofrebanco.BackgroundColor3 = Color3.fromRGB(117, 117, 117)
+cofrebanco.BorderColor3 = Color3.fromRGB(0,0,0)
+cofrebanco.Position = UDim2.new(0.514, 0,0.318, 0)
+cofrebanco.Size = UDim2.new(0, 178,0, 33)
+cofrebanco.Text = "Cofre do banco"
+cofrebanco.TextScaled = true
+cofrebanco.TextColor3 = Color3.fromRGB(0,0,0)
+local sbkhub = Instance.new("Folder", workspace)
+sbkhub.Name = "sbkhub"
+local teleportes = Instance.new("Folder", sbkhub)
+teleportes.Name = "teleportes"
+local lobbytp = Instance.new("Part", teleportes)
+lobbytp.Name = "lobbytp"
+lobbytp.Anchored = true
+lobbytp.CanCollide = false
+lobbytp.Transparency = 1
+lobbytp.Position = Vector3.new(-47.799, 3.1, 14.443)
+lobbytp.Size = Vector3.new(1,1,1)
+local morrodascasastp = Instance.new("Part", teleportes)
+morrodascasastp.Name = "morrodascasastp"
+morrodascasastp.Anchored = true
+morrodascasastp.CanCollide = false
+morrodascasastp.Transparency = 1
+morrodascasastp.Position = Vector3.new(-338, 65.725, -409)
+morrodascasastp.Size = Vector3.new(1,1,1)
+local safezonetp = Instance.new("Part", teleportes)
+safezonetp.Name = "safezonetp"
+safezonetp.Anchored = true
+safezonetp.CanCollide = false
+safezonetp.Transparency = 1
+safezonetp.Position = Vector3.new(-709.068, 2.7, 1079.657)
+safezonetp.Size = Vector3.new(1,1,1)
+local iatetp = Instance.new("Part", teleportes)
+iatetp.Name = "iatetp"
+iatetp.Anchored = true
+iatetp.CanCollide = false
+iatetp.Transparency = 1
+iatetp.Position = Vector3.new(-126.445, 5.502, 847.73)
+iatetp.Size = Vector3.new(1,1,1)
+local acampamentotp = Instance.new("Part", teleportes)
+acampamentotp.Name = "acampamentotp"
+acampamentotp.Anchored = true
+acampamentotp.CanCollide = false
+acampamentotp.Transparency = 1
+acampamentotp.Position = Vector3.new(-202.534, 2.7, 1064.189)
+acampamentotp.Size = Vector3.new(1,1,1)
+local topodomorrotp = Instance.new("Part", teleportes)
+topodomorrotp.Name = "topodomorrotp"
+topodomorrotp.Anchored = true
+topodomorrotp.CanCollide = false
+topodomorrotp.Transparency = 1
+topodomorrotp.Position = Vector3.new(-669.603, 249.924, 767.331)
+topodomorrotp.Size = Vector3.new(1,1,1)
+local casaabandonadatp = Instance.new("Part", teleportes)
+casaabandonadatp.Name = "casaabandonadatp"
+casaabandonadatp.Anchored = true
+casaabandonadatp.CanCollide = false
+casaabandonadatp.Transparency = 1
+casaabandonadatp.Position = Vector3.new(999.182, 2.7, 66.813)
+casaabandonadatp.Size = Vector3.new(1,1,1)
+local fazendatp = Instance.new("Part", teleportes)
+fazendatp.Name = "fazendatp"
+fazendatp.Anchored = true
+fazendatp.CanCollide = false
+fazendatp.Transparency = 1
+fazendatp.Position = Vector3.new(-843.478, 2.7, -381.032)
+fazendatp.Size = Vector3.new(1,1,1)
+local shoppingtp = Instance.new("Part", teleportes)
+shoppingtp.Name = "shoppingtp"
+shoppingtp.Anchored = true
+shoppingtp.CanCollide = false
+shoppingtp.Transparency = 1
+shoppingtp.Position = Vector3.new(135.533, 3.1, -122.204)
+shoppingtp.Size = Vector3.new(1,1,1)
+local cofredobancotp = Instance.new("Part", teleportes)
+cofredobancotp.Name = "cofredobancotp"
+cofredobancotp.Anchored = true
+cofredobancotp.CanCollide = false
+cofredobancotp.Transparency = 1
+cofredobancotp.Position = Vector3.new(-8.58, 17.4, 253.597)
+cofredobancotp.Size = Vector3.new(1,1,1)
+local rembantxt = Instance.new("TextBox", Framecas)
+rembantxt.BackgroundColor3 = Color3.fromRGB(117,117,117)
+rembantxt.BorderColor3 = Color3.fromRGB(0,0,0)
+rembantxt.Position = UDim2.new(0.514, 0,0.079, 0)
+rembantxt.Size = UDim2.new(0, 178,0, 48)
+rembantxt.TextColor3 = Color3.fromRGB(0,0,0)
+rembantxt.TextScaled = true
+rembantxt.Text = "Nome do jogador"
+local tpcofretxt = Instance.new("TextBox", Framecas)
+tpcofretxt.BackgroundColor3 = Color3.fromRGB(117,117,117)
+tpcofretxt.BorderColor3 = Color3.fromRGB(0,0,0)
+tpcofretxt.Position = UDim2.new(0.514, 0,0.225, 0)
+tpcofretxt.Size = UDim2.new(0, 178,0, 48)
+tpcofretxt.TextColor3 = Color3.fromRGB(0,0,0)
+tpcofretxt.TextScaled = true
+tpcofretxt.Text = "Nome do jogador"
+local tpcasaplrtxt = Instance.new("TextBox", Framecas)
+tpcasaplrtxt.BackgroundColor3 = Color3.fromRGB(117,117,117)
+tpcasaplrtxt.BorderColor3 = Color3.fromRGB(0,0,0)
+tpcasaplrtxt.Position = UDim2.new(0.08, 0,0.225, 0)
+tpcasaplrtxt.Size = UDim2.new(0, 178,0, 48)
+tpcasaplrtxt.TextColor3 = Color3.fromRGB(0,0,0)
+tpcasaplrtxt.TextScaled = true
+tpcasaplrtxt.Text = "Nome do jogador"
+local tpcasaplr = Instance.new("TextButton", Framecas)
+tpcasaplr.BackgroundColor3 = Color3.fromRGB(117,117,117)
+tpcasaplr.BorderColor3 = Color3.fromRGB(0,0,0)
+tpcasaplr.Position = UDim2.new(0.08, 0,0.174, 0)
+tpcasaplr.Size = UDim2.new(0, 178,0, 33)
+tpcasaplr.TextColor3 = Color3.fromRGB(0,0,0)
+tpcasaplr.Text = "Tp para casa do player"
+tpcasaplr.TextScaled = true
+local remtodosbans = Instance.new("TextButton", Framecas)
+remtodosbans.BackgroundColor3 = Color3.fromRGB(117,117,117)
+remtodosbans.BorderColor3 = Color3.fromRGB(0,0,0)
+remtodosbans.Position = UDim2.new(0.08, 0,0.027, 0)
+remtodosbans.Size = UDim2.new(0, 178,0, 33)
+remtodosbans.TextColor3 = Color3.fromRGB(0,0,0)
+remtodosbans.Text = "Remover todos os bans (EM BREVE)"
+remtodosbans.TextScaled = true
+local rembandeumacasa = Instance.new("TextButton", Framecas)
+rembandeumacasa.BackgroundColor3 = Color3.fromRGB(117,117,117)
+rembandeumacasa.BorderColor3 = Color3.fromRGB(0,0,0)
+rembandeumacasa.Position = UDim2.new(0.514, 0,0.027, 0)
+rembandeumacasa.Size = UDim2.new(0, 178,0, 33)
+rembandeumacasa.TextColor3 = Color3.fromRGB(0,0,0)
+rembandeumacasa.Text = "Remover ban de uma casa"
+rembandeumacasa.TextScaled = true
+local roubartdscofres = Instance.new("TextButton", Framecas)
+roubartdscofres.BackgroundColor3 = Color3.fromRGB(117,117,117)
+roubartdscofres.BorderColor3 = Color3.fromRGB(0,0,0)
+roubartdscofres.Position = UDim2.new(0.08, 0,0.103, 0)
+roubartdscofres.Size = UDim2.new(0, 178,0, 33)
+roubartdscofres.TextColor3 = Color3.fromRGB(0,0,0)
+roubartdscofres.Text = "Roubar todos os cofres (EM BREVE)"
+roubartdscofres.TextScaled = true
+local tpcofreplr = Instance.new("TextButton", Framecas)
+tpcofreplr.BackgroundColor3 = Color3.fromRGB(117,117,117)
+tpcofreplr.BorderColor3 = Color3.fromRGB(0,0,0)
+tpcofreplr.Position = UDim2.new(0.514, 0,0.174, 0)
+tpcofreplr.Size = UDim2.new(0, 178,0, 33)
+tpcofreplr.TextColor3 = Color3.fromRGB(0,0,0)
+tpcofreplr.Text = "Teleportar pro cofre do player"
+tpcofreplr.TextScaled = true
+
+
+------ draggable gui ------
+
+
+local UIS = game:GetService('UserInputService')
+local frame = Framedrag
+local dragToggle = nil
+local dragSpeed = 0.25
+local dragStart = nil
+local startPos = nil
+
+local function updateInput(input)
+	local delta = input.Position - dragStart
+	local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+		startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+end
+
+frame.InputBegan:Connect(function(input)
+	if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+		dragToggle = true
+		dragStart = input.Position
+		startPos = frame.Position
+		input.Changed:Connect(function()
+			if input.UserInputState == Enum.UserInputState.End then
+				dragToggle = false
+			end
+		end)
+	end
+end)
+
+UIS.InputChanged:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+		if dragToggle then
+			updateInput(input)
+		end
+	end
+end)
+
+
+------ abrir os gui ------
+
+
+principal.MouseButton1Click:Connect(function()
+	Framepri.Visible = true
+	principal.BorderColor3 = Color3.fromRGB(0,255,0)
+	Frametel.Visible = false
+	teleporte.BorderColor3 = Color3.fromRGB(0,0,0)
+	Framecas.Visible = false
+	casas.BorderColor3 = Color3.fromRGB(0,0,0)
+	Frameout.Visible = false
+	outros.BorderColor3 = Color3.fromRGB(0,0,0)
+end)
+teleporte.MouseButton1Click:Connect(function()
+	Framepri.Visible = false
+	principal.BorderColor3 = Color3.fromRGB(0,0,0)
+	Frametel.Visible = true
+	teleporte.BorderColor3 = Color3.fromRGB(0,255,0)
+	Framecas.Visible = false
+	casas.BorderColor3 = Color3.fromRGB(0,0,0)
+	Frameout.Visible = false
+	outros.BorderColor3 = Color3.fromRGB(0,0,0)
+end)
+casas.MouseButton1Click:Connect(function()
+	Framepri.Visible = false
+	principal.BorderColor3 = Color3.fromRGB(0,0,0)
+	Frametel.Visible = false
+	teleporte.BorderColor3 = Color3.fromRGB(0,0,0)
+	Framecas.Visible = true
+	casas.BorderColor3 = Color3.fromRGB(0,255,0)
+	Frameout.Visible = false
+	outros.BorderColor3 = Color3.fromRGB(0,0,0)
+end)
+outros.MouseButton1Click:Connect(function()
+	Framepri.Visible = false
+	principal.BorderColor3 = Color3.fromRGB(0,0,0)
+	Frametel.Visible = false
+	teleporte.BorderColor3 = Color3.fromRGB(0,0,0)
+	Framecas.Visible = false
+	casas.BorderColor3 = Color3.fromRGB(0,0,0)
+	Frameout.Visible = true
+	outros.BorderColor3 = Color3.fromRGB(0,255,0)
+end)
+
+
+------ funções ------
+
+
+function onKeyPress(inputObject, gameProcessedEvent)
+	if inputObject.KeyCode == Enum.KeyCode.RightControl then
+		if Framedrag.Visible == true then
+			Framedrag.Visible = false
+		else
+			Framedrag.Visible = true
+		end
+	end
+end
+game:GetService("UserInputService").InputBegan:connect(onKeyPress)
+fechar.MouseButton1Click:Connect(function()
+	ScriptBK:Destroy()
+end)
+sim.MouseButton1Click:Connect(function()
+	ScriptBK:Destroy()
+end)
+nao.MouseButton1Click:Connect(function()
+	Framefe.Visible = false
+end)
+lobby.MouseButton1Click:Connect(function()
+	game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = lobbytp.CFrame
+end)
+morro.MouseButton1Click:Connect(function()
+	game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = morrodascasastp.CFrame
+end)
+safezone.MouseButton1Click:Connect(function()
+	game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = safezonetp.CFrame
+end)
+iate.MouseButton1Click:Connect(function()
+	game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = iatetp.CFrame
+end)
+acamp.MouseButton1Click:Connect(function()
+	game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = acampamentotp.CFrame
+end)
+topodomorro.MouseButton1Click:Connect(function()
+	game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = topodomorrotp.CFrame
+end)
+casaaban.MouseButton1Click:Connect(function()
+	game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = casaabandonadatp.CFrame
+end)
+fazenda.MouseButton1Click:Connect(function()
+	game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = fazendatp.CFrame
+end)
+shopping.MouseButton1Click:Connect(function()
+	game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = shoppingtp.CFrame
+end)
+cofrebanco.MouseButton1Click:Connect(function()
+	game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = cofredobancotp.CFrame
+end)
+rembandeumacasa.MouseButton1Click:Connect(function()
+	local plrnametxt = rembantxt.Text
+	local plrname = plrnametxt.."House"
+	local lots = workspace:WaitForChild("001_Lots")
+	local casa = lots:WaitForChild(plrname)
+	local numero = casa.Number.Number.Value
+	local banblock = "BannedBlock"..numero
+	local ban = casa.HousePickedByPlayer.HouseModel:WaitForChild(banblock)
+	ban:Destroy()
+end)
+tpcofreplr.MouseButton1Click:Connect(function()
+	local plrnametxt = tpcofretxt.Text
+	local plrname = plrnametxt.."House"
+	local lots = workspace:WaitForChild("001_Lots")
+	local casa = lots:WaitForChild(plrname)
+	local numero = casa.Number.Number.Value
+	local cofre = casa.HousePickedByPlayer.HouseModel:WaitForChild("001_Safe")
+	local tpcofre = cofre.Keypad.Part
+	local meujogador = game:GetService("Players").LocalPlayer.Character
+	meujogador.HumanoidRootPart.CFrame = tpcofre.CFrame
+end)
+tpcasaplr.MouseButton1Click:Connect(function()
+	local casatxt = tpcasaplrtxt.Text
+	local plrname = casatxt.."House"
+	local lots = workspace:WaitForChild("001_Lots")
+	local casa = lots:WaitForChild(plrname)
+	local numero = casa.Number.Number.Value
+	local casaplrtp = casa.RPName
+	local meujogador = game:GetService("Players").LocalPlayer.Character
+	meujogador.HumanoidRootPart.CFrame = casaplrtp.CFrame
+end)
